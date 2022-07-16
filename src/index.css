@@ -14,6 +14,10 @@ body{
   width: 1280px;
   margin: 50px auto;
 }
+/* Header============================ */
+header{
+  position:relative;
+}
 header .logo{
   font-size: 20px;
   font-weight: 600;
@@ -23,13 +27,14 @@ header .nav{
   text-align: right;
 }
 header .nav li{
+  font-size: 20px;
   display: inline;
   margin-left: 20px;
   cursor: pointer;
   transition: opacity 400ms ease;
 }
 header .nav li:hover{
-opacity: 0.6;
+opacity: 0.5;
 }
 
 header .banner{
@@ -53,6 +58,73 @@ width: 330px;
 font-size: 40px;
 font-weight: 600px;
 color: rgb(72, 70, 70);
+}
+
+header .shop_cart{
+  width: 450px;
+  position: absolute;
+  top:50px;
+  right: 0;
+  min-height: 100px;
+  background-color: #fafafa;
+  box-shadow: 4px 5px 15px -7px #606060;
+  z-index: 100;
+}
+
+.active{
+  color: #e77777;
+}
+/* main========================================= */
+main{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+main .item{
+  width: 30%;
+  margin-bottom: 40px;
+  background-color: #f5f5f5;
+  border: solid 1.5px #f6f6f6;
+  border-radius: 2px;
+  position: relative;
+  padding-bottom: 20px;
+}
+main .item img{
+  width: 100%;
+  transition: transform 300ms ease;
+}
+main .item img:hover{
+cursor: pointer;
+transform: scale(1.05);
+}
+
+main h2,main p, main b{
+  margin: 10px 20px;
+  color: #333;
+}
+main b{
+  color:#5fa36a;
+}
+
+main .add_to_cart{
+  font-weight: 600;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  color:#fff;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background-color: #e77777;
+  width: 35px;
+  height: 35px;
+  transition: transform 300ms ease;
+}
+
+main .add_to_cart:hover{
+  transform: scale(1.1);
 }
 
 footer{
