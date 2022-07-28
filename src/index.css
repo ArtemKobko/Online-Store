@@ -9,22 +9,25 @@ body{
   color: #222;
   font-family: 'Albert Sans', sans-serif;
   font-weight: 300;
-}
-.main{
-  width: 1280px;
-  margin: 50px auto;
+  width: 1240px;
+  margin:50px auto;
 }
 /* Header============================ */
 header{
   position:relative;
+ 
 }
-header .logo{
-  font-size: 20px;
+header .shop_name{
+  font-size: 22px;
   font-weight: 600;
+  position: absolute;
+  top:5px;
 }
+
 header .nav{
   list-style: none;
   text-align: right;
+  margin-right: 20px;
 }
 header .nav li{
   font-size: 20px;
@@ -32,6 +35,10 @@ header .nav li{
   margin-left: 20px;
   cursor: pointer;
   transition: opacity 400ms ease;
+}
+header .nav a{
+  color: #222;
+  text-decoration: none;
 }
 header .nav li:hover{
 opacity: 0.5;
@@ -61,13 +68,14 @@ color: rgb(72, 70, 70);
 }
 
 header .shop_cart{
-  width: 300px;
+  width: 270px;
   position: absolute;
   top:50px;
   right: 0;
   background-color: #fafafa;
   box-shadow: 4px 5px 15px -7px #606060;
-  z-index: 100;
+  border-radius: 15px;
+  z-index: 5;
   padding: 15px 20px 0;
 }
 
@@ -99,7 +107,6 @@ header .shop_cart .item button{
   left: 250px;
   font-size: 20px;
   font-weight: 600;
-
 }
 header .shop_cart .item button:hover{
   background-color: #ed5c5c;
@@ -121,7 +128,34 @@ header .shop_cart .item button:hover{
   font-weight: 600;
   margin-bottom: 10px;
 }
-/* ================== */
+.close{
+  background-color: #ed5c5c;
+  color: #fff;
+  font-size: 20px;
+  border: 1px solid #fff;
+  transition: transform 300ms ease;
+}
+.close:hover{
+  transform: scale(1.05);
+}
+.pay{
+  background-color: #5fa36a;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  width: 50px;
+  position: relative;
+  top: -25px;
+  left: 230px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+.pay:hover{
+  transform: scale(1.05);
+}
+/* cat================== */
 .categories div{
   display: inline-block;
   background-color: #f5f5f5;
@@ -138,6 +172,7 @@ header .shop_cart .item button:hover{
   transform: scale(1.05);
 
 }
+
 /* main========================================= */
 main{
   display: flex;
@@ -192,8 +227,188 @@ main .add_to_cart:hover{
   background-color: #ed5c5c;
 
 }
-
+/* ======footer */
 footer{
   text-align: center;
   margin: 50px auto;
+  background-color: #f5f5f5;
+  padding: 15px;
+ 
+}
+footer a{
+  text-decoration: none;
+  color:#222;
+  margin-top:10px;
+}
+footer div{
+  margin-top:10px;
+}
+
+.hide{
+  display: none;
+}
+/* media================*/
+@media (max-width:1260px){
+ body{
+ width: 1100px;
+ padding: 0 30px;
+ }
+}
+ @media (max-width:940px){
+ 
+    body{
+      font-size: 22px;
+    }
+    main .item{
+      width: 45%;
+    }
+    header .nav li{
+      font-size: 32px;
+    }
+    header .shop_name{
+      font-size: 35px;
+    }
+    header .banner{
+      height: 450px;
+    }
+    header .shop_cart .item button{
+      font-size: 22px;
+      width: 25px;
+    }
+    header .shop_cart .item img {
+      width: 90px;
+    }
+    main .add_to_cart{
+      width: 45px;
+      height: 45px;
+      font-size: 22px;
+    }
+    main b{
+      font-size: 22px;
+    }
+    .categories div{
+      margin: 0 25px 10px 20px;
+      font-size: 30px;
+    }
+ }
+ @media  (max-width:640px){
+  body{
+    width: 580px;
+    font-size: 15px;
+    position: relative; 
+  }
+  header .banner{
+    height: 300px;
+  }
+  header .banner::after{
+    content: url(./images/logo.png) "The best boots for tourism";
+    top: 40px;
+    left: 30px;
+    width: 250px;
+    font-size: 25px;
+    font-weight: 600px;
+  }
+  header .nav{
+    display:none;
+  }
+  header nav{
+    height: 25px;
+  }
+  header .shop_name{
+    top:10px;
+    left: 15px;
+    font-size: 25px;
+  }
+
+  header .navmenu{
+  display: flex;
+  margin-left: 400px;
+  flex-direction: column;
+  background-color: #fafafa;
+  box-sizing: border-box;
+  }
+
+  header .navmenu li{
+    font-size: 35px;
+    display: inline;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: opacity 400ms ease;
+    z-index: 99;
+    background-color: #f5f5f5;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+  }
+  header .navmenu a{
+    color: #222;
+    text-decoration: none;
+  }
+  header .navmenu li:hover{
+  opacity: 0.5;
+  }
+  header .shop_cart{
+    top: 100px;
+    font-size: 15px;
+  }
+  header .buttonMenu{
+    display: block;
+    margin: 0 0 10px 480px;
+    background-color: #f5f5f5;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 30px;
+    color: #333;
+    font-weight: 300;
+    cursor: pointer;
+  }
+  header .shop_cart{
+    width: 270px;
+    position: absolute;
+    top:270px;
+    right: 0;
+    background-color: #fafafa;
+    box-shadow: 4px 5px 15px -7px #606060;
+    border-radius: 15px;
+    z-index: 5;
+    padding: 15px 20px 0;
+  }
+  
+  .categories div{
+    margin: 0 25px 10px 40px;
+    font-size: 30px;
+  }
+    div .item{
+      width: 80%;
+      margin: 20px auto;
+    }
+ }
+
+ @media  (max-width:440px){
+
+  body{
+    width: 430px;
+  }
+  header .banner{
+    height: 250px;
+  }
+  header .navmenu{
+    margin-left: 240px;
+ }
+ header .navmenu li{
+ font-size: 30px;
+}
+header .buttonMenu{
+  margin-left: 330px;
+}
+header .shop_cart{
+  top: 230px;
+
+}
+.categories div{
+  margin: 0 20px 10px 10px;
+  font-size: 25px;
+}
 }
